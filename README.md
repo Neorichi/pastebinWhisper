@@ -15,6 +15,9 @@ Install the dependencies via pip:
 
 #### Important
 
+PasteBin PRO API required (Scraping API is only available for LIFETIME PRO members, and only for those who have their IP whitelisted.)
+https://pastebin.com/doc_scraping_api
+
 Change DB Config (mysql)
 <pre>
 host="xxxx.xxxx.us-east-1.rds.amazonaws.com"

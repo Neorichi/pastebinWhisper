@@ -73,7 +73,7 @@ def getPastebinEmail(conn):
             email = searchEmail(line_)
             line = urllib.parse.quote(line_)
             with conn.cursor() as cur:
-                exist = cur.execute('select email from pastebin where email = "%s" LIMIT 1' % email)
+                exist = cur.execute('select email from pastebin where email = "%s" and ref = "%s" LIMIT 1' % (email,ref))
                 if exist==0:
                     print("-------")
                     print(url)
@@ -81,7 +81,8 @@ def getPastebinEmail(conn):
                     if line_!=email:
                         print(line_)
                     cur.execute("insert into pastebin (email, line, ref, url) values('%s', '%s', '%s', '%s')" % (email,line,ref,url))
-        time.sleep(0.5)
+                    conn.commit()
+        #time.sleep(0.5)
 
 def main():
     ascii_banner = pyfiglet.figlet_format("PasteBinWhisper")
@@ -91,7 +92,7 @@ def main():
         print(datetime.datetime.now().strftime("%H:%M %d/%m/%y"))
         # Search
         getPastebinEmail(conn)
-        conn.commit()
+
         time.sleep(time_tag)
 
 if __name__ == "__main__":
