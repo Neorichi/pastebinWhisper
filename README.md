@@ -40,6 +40,12 @@ CREATE TABLE `pastebin` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 </pre>
 
+Add Telegram API and Group ID (Optional)
+<pre>
+telegram_on = True
+TOKEN = 'xxxxx:xxxx-xxx'
+mi_canal = xxxxxx
+</pre>
 
 ## Usage
 <pre>usage: python3 pastebinWhisper.py  </pre>
