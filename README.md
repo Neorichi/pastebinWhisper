@@ -64,17 +64,23 @@ python3 pastebinWhisper.py
                                                           |_|              
 
 -------
-https://scrape.pastebin.com/api_scrape_item.php?i=XXXXXX
+https://pastebin.com/xxxxxxx
 XXXXXX@localhost.loca
 XXXXXXX@localhost.localdomain
 -------
-https://scrape.pastebin.com/api_scrape_item.php?i=XXXXXX
+https://pastebin.com/xxxxxxx
+XXXXXXXX@xxxxx.com:xxxxxx
+-------
+https://pastebin.com/xxxxxxx
+XXXXXXXX@xxxxx.com:xxxxxx
+-------
+https://pastebin.com/xxxxxxx
 XXXXXXX@gmail.com
 XXXXXXX@gmail.com"}],"paginas":2,"rutaVdm":"1,10,81","indexar":true,"documentoId":"CRI-0000695","mostrar":true,"uniqu
 -------
-https://scrape.pastebin.com/api_scrape_item.php?i=XXXXXX
+https://pastebin.com/xxxxxxx
 XXXXXXXX@tree-xxxx-xxxxx.com
 -------
-https://scrape.pastebin.com/api_scrape_item.php?i=XXXXXX
+https://pastebin.com/xxxxxxx
 XXXXXXXX@gmail.com
 XXXXXXXX@gmail.com/25I020T3rw/64545
