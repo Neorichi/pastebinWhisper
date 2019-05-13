@@ -13,6 +13,14 @@ Install the dependencies via pip:
 
 <pre> pip3 install -r requirements.txt </pre>
 
+#### Telegram Implemetantion
+
+To used of the telegram bot you need to get the chat id
+<pre>
+https://github.com/Neorichi/telegramWhisper
+</pre>
+
+
 #### Important
 
 PasteBin PRO API required (Scraping API is only available for LIFETIME PRO members, and only for those who have their IP whitelisted.)

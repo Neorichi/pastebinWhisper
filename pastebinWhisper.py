@@ -29,7 +29,7 @@ password="xxxxxx"
 
 #Example schema table
 '''
-CREATE TABLE `pastebin` (
+CREATE TABLE `pastebins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(250),
   `line` varchar(250),
@@ -92,7 +92,7 @@ def getPastebinEmail(conn):
             line = urllib.parse.quote(line_)
             #print(email)
             with conn.cursor() as cur:
-                exist = cur.execute('select email from pastebin where email = "%s" and ref = "%s" LIMIT 1' % (email,ref))
+                exist = cur.execute('select email from pastebins where email = "%s" and ref = "%s" LIMIT 1' % (email,ref))
                 if exist==0:
                     found_results = True
                     url = "https://pastebin.com/%s" % ref
@@ -101,7 +101,7 @@ def getPastebinEmail(conn):
                     print(email)
                     if line_!=email:
                         print(line_)
-                    cur.execute("insert into pastebin (email, line, ref, url) values('%s', '%s', '%s', '%s')" % (email,line,ref,url))
+                    cur.execute("insert into pastebins (email, line, ref, url) values('%s', '%s', '%s', '%s')" % (email,line,ref,url))
                     conn.commit()
         if telegram_on and found_results:
             try:
