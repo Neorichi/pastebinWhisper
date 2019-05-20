@@ -102,7 +102,7 @@ def getPastebinEmail(conn):
                     if line_!=email:
                         print(line_)
                     cur.execute("insert into pastebins (email, line, ref, url) values('%s', '%s', '%s', '%s')" % (email,line,ref,url))
-                    conn.commit()
+            conn.commit()
         if telegram_on and found_results:
             try:
                 mi_bot.sendMessage(chat_id=mi_canal, text=("%s" % url))
@@ -114,8 +114,8 @@ def getPastebinEmail(conn):
 def main():
     ascii_banner = pyfiglet.figlet_format("PasteBinWhisper")
     print("\n"+ascii_banner)
-    conn = pymysql.connect(host, user=user,port=port,passwd=password, db=dbname)
     while True:
+        conn = pymysql.connect(host, user=user,port=port,passwd=password, db=dbname)
         print(datetime.datetime.now().strftime("%H:%M %d/%m/%y"))
         # Search
         getPastebinEmail(conn)
